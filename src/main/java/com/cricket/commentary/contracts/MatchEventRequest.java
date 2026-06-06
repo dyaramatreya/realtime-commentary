@@ -1,14 +1,7 @@
-package com.cricket.commentary.model;
+package com.cricket.commentary.contracts;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
+public class MatchEventRequest {
 
-@Entity
-public class CommentaryEvent {
-
-    @Id
-    @GeneratedValue
     private Long id;
 
     private String matchId;

@@ -1,10 +1,11 @@
 package com.cricket.commentary.controller;
 
-import com.cricket.commentary.model.CommentaryEvent;
-import com.cricket.commentary.service.CommentaryService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.cricket.commentary.contracts.MatchEventRequest;
+import com.cricket.commentary.service.CommentaryService;
 
 @RestController
 @RequiredArgsConstructor
@@ -15,7 +16,7 @@ public class CommentaryController {
     @PostMapping("/commentary")
     public void createCommentary() {
 
-        CommentaryEvent event = new CommentaryEvent();
+        MatchEventRequest event = new MatchEventRequest();
 
         event.setMatchId("match-123");
         event.setOver(15);
