@@ -1,5 +1,10 @@
 package com.cricket.commentary.contracts;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MatchEventRequest {
 
     private Long id;
@@ -10,39 +15,4 @@ public class MatchEventRequest {
     private String commentary;
     private Long eventTimestamp;
 
-    public String getMatchId() {
-        return matchId;
-    }
-
-    public Integer getOver() {
-        return over;
-    }
-
-    public Integer getBall() {
-        return ball;
-    }
-
-    public String getCommentary() {
-        return commentary;
-    }
-
-    public Long getEventTimestamp() {
-        return eventTimestamp;
-    }
-
-    public void setMatchId(String matchId) {
-        this.matchId = matchId;
-    }
-
-    public void setOver(int over) {
-        this.over = over;
-    }
-
-    public void setBall(int ball) {
-        this.ball = ball;
-    }
-
-    public void setCommentary(String commentary) {
-        this.commentary = commentary;
-    }
 }

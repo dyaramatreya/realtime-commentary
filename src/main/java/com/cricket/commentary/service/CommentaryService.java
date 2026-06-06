@@ -20,7 +20,7 @@ public class CommentaryService {
                 matchEventRequest.getOver(),
                 matchEventRequest.getBall(),
                 matchEventRequest.getCommentary(),
-                matchEventRequest.getEventTimestamp()
+                matchEventRequest.getId()
         );
         producer.publish(event);
     }

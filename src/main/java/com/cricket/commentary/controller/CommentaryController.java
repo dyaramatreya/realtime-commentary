@@ -16,13 +16,14 @@ public class CommentaryController {
     @PostMapping("/commentary")
     public void createCommentary() {
 
-        MatchEventRequest event = new MatchEventRequest();
+        MatchEventRequest eventRequest = new MatchEventRequest();
 
-        event.setMatchId("match-123");
-        event.setOver(15);
-        event.setBall(4);
-        event.setCommentary("FOUR!");
+        eventRequest.setMatchId("match-123");
+        eventRequest.setOver(15);
+        eventRequest.setBall(4);
+        eventRequest.setCommentary("FOUR!");
+        eventRequest.setId(21L);
 
-        commentaryService.createCommentary(event);
+        commentaryService.createCommentary(eventRequest);
     }
 }
