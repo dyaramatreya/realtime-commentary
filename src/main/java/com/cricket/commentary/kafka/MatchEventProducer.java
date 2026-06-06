@@ -11,9 +11,7 @@ import com.cricket.commentary.contracts.MatchEvent;
 public class MatchEventProducer {
 
     private final KafkaTemplate<String, MatchEvent> kafkaTemplate;
-
     private static final String TOPIC = "match-events";
-
     public void publish(MatchEvent event) {
         kafkaTemplate.send(TOPIC, event.matchId(), event);
     }
