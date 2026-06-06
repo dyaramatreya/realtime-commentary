@@ -8,5 +8,7 @@ import java.util.List;
 
 @Repository
 public interface CommentaryRepository extends JpaRepository<CommentaryEvent, Long> {
-    List<CommentaryEvent> findByMatchIdAndIdGreaterThanOrderById(String matchId, Long  id);
+    List<CommentaryEvent> findByMatchIdAndIdGreaterThanOrderByIdDesc(String matchId, Long  id);
+
+    List<CommentaryEvent> findAllByMatchIdOrderByIdDesc(String matchId);
 }
