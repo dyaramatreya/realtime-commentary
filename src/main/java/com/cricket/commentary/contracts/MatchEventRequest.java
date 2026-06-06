@@ -8,11 +8,9 @@ import lombok.Setter;
 public class MatchEventRequest {
 
     private Long id;
-
     private String matchId;
     private Integer over;
     private Integer ball;
     private String commentary;
     private Long eventTimestamp;
-
 }

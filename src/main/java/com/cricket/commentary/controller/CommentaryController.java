@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.lang.NonNull;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -27,16 +28,8 @@ public class CommentaryController {
     }
 
     @PostMapping("/commentary")
-    public void createCommentary() {
-
-        MatchEventRequest eventRequest = new MatchEventRequest();
-
-        eventRequest.setMatchId("match-123");
-        eventRequest.setOver(15);
-        eventRequest.setBall(4);
-        eventRequest.setCommentary("FOUR!");
-        eventRequest.setId(21L);
-
-        commentaryService.createCommentary(eventRequest);
+    public void createCommentary(@RequestBody MatchEventRequest matchEventRequest) {
+//        commentaryService.createCommentary(matchEventRequest);
+        commentaryService.generateCommentary();
     }
 }
