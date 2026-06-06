@@ -1,4 +1,4 @@
-package com.cricket.contracts;
+package com.cricket.commentary.contracts;
 
 public record MatchEvent(
         String matchId,
